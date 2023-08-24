@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-class MyApplication : Application() {
+class MyApplication : Application() {   // added myapplication class
     override fun onCreate() {
         super.onCreate()
         AppCenter.start(
