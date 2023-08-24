@@ -4,6 +4,7 @@
 
     <application
         android:name=".MyApplication"
+        android:value="7d53d9e4-a0c3-422b-b604-975cb9b273ab"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
