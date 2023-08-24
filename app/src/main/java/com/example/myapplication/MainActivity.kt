@@ -12,6 +12,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +30,17 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+}
+class MyApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        AppCenter.start(
+            this,
+            "7d53d9e4-a0c3-422b-b604-975cb9b273ab",
+            Analytics::class.java,
+            Crashes::class.java
+        )
     }
 }
 
