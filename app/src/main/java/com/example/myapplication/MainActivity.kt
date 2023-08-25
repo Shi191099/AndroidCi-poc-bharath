@@ -36,8 +36,7 @@ class MainActivity : ComponentActivity() {
 class MyApplication : Application() {   // added myapplication class
     override fun onCreate() {
         super.onCreate()
-        AppCenter.start(getApplication(), "7d53d9e4-a0c3-422b-b604-975cb9b273ab",
-                  Analytics.class, Crashes.class);
+        AppCenter.start(getApplication(), "7d53d9e4-a0c3-422b-b604-975cb9b273ab", Analytics.class, Crashes.class);
     }
 }
 
